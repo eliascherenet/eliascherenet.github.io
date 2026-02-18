@@ -86,9 +86,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }).addTo(map);
 
     // Example markers
-    var kenyaMarker = L.marker([0.0, 36.5]).addTo(map)
+    var kenyaMarker = L.marker([−1.63397, 37.1476]).addTo(map)
         .bindPopup("<b>Kapiti Conservancy, Kenya</b><br>Range Biomass Modeling");
 
-    var ethiopiaMarker = L.marker([8.0, 38.5]).addTo(map)
+    var ethiopiaMarker = L.marker([9.4000, 42.017]).addTo(map)
         .bindPopup("<b>Arid & Semi-Arid Lands, Ethiopia</b><br>Natural Resources Monitoring");
 });
