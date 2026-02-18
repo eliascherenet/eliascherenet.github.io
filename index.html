@@ -1,84 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elias Cherenet | Research Portfolio</title>
+<meta name="description" content="Elias Cherenet’s research portfolio in geospatial analytics, biomass modeling, drought monitoring, and machine learning.">
+<meta name="keywords" content="geospatial, biomass, drought monitoring, machine learning, GIS, Africa research">
+<meta name="author" content="Elias Cherenet">
+
+<!-- Leaflet CSS for interactive map -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
 <body>
 
+<!-- Navigation -->
+<nav>
+  <a href="#about">About</a>
+  <a href="#research">Research</a>
+  <a href="#locations">Locations</a>
+  <a href="#map">Map</a>
+  <a href="#skills">Skills</a>
+  <a href="#cv">CV</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
 <header>
     <h1>Elias Cherenet</h1>
-    <p>Geospatial Analyst | Remote Sensing | Biomass Modeling| Drought Monitoring|ML|Climate Models|Natural Resources and Forest Resources Monitoring</p>
-</head>
-<title>Your Name | Research Portfolio</title>
+    <p>Geospatial Analyst | Remote Sensing | Biomass Modeling | Drought Monitoring | ML | Climate Models | Natural Resources Monitoring</p>
+</header>
 
-<meta name="description" content="Research portfolio showcasing GIS mapping, biomass studies, and environmental research in Kenya and Ethiopia.">
-
-<meta name="keywords" content="GIS, Biomass, Research, Kenya, Ethiopia, Environmental Science">
-
-<meta name="author" content="Your Name">
-
-<section>
+<!-- About Me -->
+<section id="about">
     <h2>About Me</h2>
     <p>
-         I am PhD student at University of New England Australia, School of ERS, originally from Haramaya University, Ethiopia. I hold a BSc in Natural Resources from Bahir Dar University, Ethiopia, and an MSc in Geoinformation Science and Earth Observation from the University of Twente (ITC), the Netherlands. My research focuses on drought monitoring and assessment
-        using Earth Observation data and machine learning techniques across Eastern Africa, 
-        where I integrate satellite, climate and geospatial data to develop integrated drought models 
-        that support ecosystem resilience, sustainable land management, and climate adaptation.
-         I am passionate about applying geospatial technologies and data-driven approaches
-          to strengthen early warning systems,climate-resilient livestock systems and inform environmental decision-making in 
-          dryland and semi-arid pastoralist regions, where drought is the major climate 
-          change-related problem.
+        I am a PhD student at the University of New England, Australia, School of ERS, originally from Haramaya University, Ethiopia. 
+        I hold a BSc in Natural Resources from Bahir Dar University, Ethiopia, and an MSc in Geoinformation Science and Earth Observation 
+        from the University of Twente (ITC), Netherlands. My research focuses on drought monitoring using Earth Observation data 
+        and machine learning techniques across Eastern Africa. I integrate satellite, climate, and geospatial data to develop 
+        models that support ecosystem resilience, sustainable land management, and climate adaptation.
     </p>
 </section>
 
-<section>
+<!-- Research Interests -->
+<section id="research">
     <h2>Research Interests</h2>
     <ul>
         <li>Range Biomass Estimation using Drone & Satellite Data</li>
         <li>Machine Learning in Environmental Modeling</li>
         <li>Drought Monitoring</li>
         <li>Climate-Resilient Livestock Systems</li>
-        <li>Geospatial data analysis for ecosystem services</li>
-        <li>Natural resources and land degradation assessment using EO data</li>
-        <li>Developing integrated drought indices applicable for Eastern Africa regions</li>
-        <li>Application of geospatial technologies in environmental monitoring</li>
-        <li>EO data for monitoring Emission from livestock systems focusing on range land (Methane)</li>
-        <li>Alien or invasive species monitoring using EO and climate data</li>
-        <li>Climate models (CMIP6) application in Eastern Africa </li>
+        <li>Geospatial Data Analysis for Ecosystem Services</li>
+        <li>Natural Resources and Land Degradation Assessment using EO Data</li>
+        <li>Developing Integrated Drought Indices for Eastern Africa</li>
+        <li>Application of Geospatial Technologies in Environmental Monitoring</li>
+        <li>EO Data for Livestock Emission Monitoring (Methane)</li>
+        <li>Alien or Invasive Species Monitoring using EO and Climate Data</li>
+        <li>Climate Models (CMIP6) Applications in Eastern Africa</li>
     </ul>
 </section>
 
-
-<section>
+<!-- Research Locations -->
+<section id="locations">
     <h2>Research Locations</h2>
     <ul>
-        <li>🇰🇪 Kenya – Kapiti Conservancy(Range Biomass Modeling)</li>
-        <li>🇪🇹 Ethiopia – Arid and semi arid lands (Natural Resources Monitoring),Geospatial Urban Analysis</li>
-            </ul>
+        <li>🇰🇪 <strong>Kenya</strong> – Kapiti Conservancy (Range Biomass Modeling)</li>
+        <li>🇪🇹 <strong>Ethiopia</strong> – Arid & Semi-Arid Lands (Natural Resources Monitoring)</li>
+    </ul>
 </section>
 
-
-<section>
+<!-- Interactive Map -->
+<section id="map">
     <h2>Interactive Open Map</h2>
     <div id="map"></div>
 </section>
 
-<section>
+<!-- Skills -->
+<section id="skills">
     <h2>Skills</h2>
     <ul>
-        <li>R, Python, ArcMap and ArcGIS pro, QGIS,Excel</li>
-        <li>ML,Linear models</li>
+        <li>R, Python, ArcMap, ArcGIS Pro, QGIS, Excel</li>
+        <li>Machine Learning, Linear Models</li>
         <li>Satellite and Drone Data Processing</li>
-        <li>Spatial data Analysis</li>
+        <li>Spatial Data Analysis</li>
+        <li>Climate Data Analysis</li>
     </ul>
 </section>
 
-<section>
-    <h2>Contact</h2>
-    <p>Email: eliachent@gmail.com</p>
+<!-- CV -->
+<section id="cv">
+    <h2>My CV</h2>
+    <p>
+        <a href="Elias CV_2024-2025.pdf" target="_blank">Open CV in Browser</a> |
+        <a href="Elias CV_2024-2025.pdf" download>Download CV</a>
+    </p>
 </section>
 
+<!-- Contact -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:eliachent@gmail.com">eliachent@gmail.com</a></p>
+</section>
+
+<!-- Footer -->
 <footer>
     <p>© 2026 Elias Cherenet</p>
 </footer>
 
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Custom JS -->
 <script src="script.js"></script>
-
 </body>
-
+</html>
