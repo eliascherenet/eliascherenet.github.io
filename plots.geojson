@@ -1,0 +1,31 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kapiti Conservancy",
+        "country": "Kenya",
+        "year": "2025",
+        "funding": "ACIAR-ILRI Initiative under Africa-Asia Bioscience Challenge Fund(AABCF) program",
+        "description": "Drone-based biomass modeling in semi-arid rangelands."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [36.80, -1.40]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ethiopian Arid and Semi-Arid lands",
+        "country": "Ethiopia",
+        "description": "Natural Resources Monitoring, Invasive species modeling and geospatial analysis."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [37.85, 6.98]
+           }
+    }
+  ]
+}

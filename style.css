@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background: #1f3c88;
+    color: white;
+}
+
+#map {
+    height: 600px;
+    width: 95%;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #222;
+    color: white;
+}
+
+
+
+.legend {
+    background: white;
+    padding: 12px;
+    line-height: 1.6;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    font-size: 14px;
+}
+
+.legend i {
+    width: 15px;
+    height: 15px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.9;
+}
