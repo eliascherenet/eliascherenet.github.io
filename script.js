@@ -52,6 +52,14 @@ fetch('./plots.geojson')
         }
     }).addTo(map);
 
+    // Additional Fixed Research Markers
+L.marker([-1.63397, 37.1476]).addTo(map)
+    .bindPopup("<b>Kapiti Conservancy, Kenya</b><br>Lat: -1.63397, Lon: 37.1476");
+
+L.marker([9.4000, 42.017]).addTo(map)
+    .bindPopup("<b>Haramaya, Ethiopia</b><br>Lat: 9.4000, Lon: 42.017");
+
+
 });
 
 // Layer Control
@@ -76,19 +84,3 @@ legend.onAdd = function () {
 legend.addTo(map);
 
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Initialize the map
-    var map = L.map('map').setView([1.5, 37.5], 6); // adjust coordinates to Eastern Africa
-
-    // Add OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Example markers
-    var kenyaMarker = L.marker([−1.63397, 37.1476]).addTo(map)
-        .bindPopup("<b>Kapiti Conservancy, Kenya</b><br>Range Biomass Modeling");
-
-    var ethiopiaMarker = L.marker([9.4000, 42.017]).addTo(map)
-        .bindPopup("<b>Arid & Semi-Arid Lands, Ethiopia</b><br>Natural Resources Monitoring");
-});
