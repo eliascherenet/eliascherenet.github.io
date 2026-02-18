@@ -1,84 +1,80 @@
-// Initialize map
-var map = L.map('map').setView([2, 37], 6);
+// -------------------------------
+// Initialize Map
+// -------------------------------
 
-map.setMaxBounds([
-    [-5, 30],   // Southwest corner
-    [15, 45]    // Northeast corner
-]);
+var map = L.map('map').setView([4.5, 39], 6);
 
-
-// OpenStreetMap Base Layer
-var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap'
+// OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Satellite Layer (ESRI)
-var satellite = L.tileLayer(
-    'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-    attribution: 'Tiles &copy; Esri'
-});
 
-// Color by country
-function getColor(country) {
-    if (country === "Kenya") return "green";
-    if (country === "Ethiopia") return "blue";
-    return "gray";
+// -------------------------------
+// Research Locations Coordinates
+// -------------------------------
+
+// Kapiti Conservancy, Kenya
+var kapiti = [-1.617, 37.058];
+
+// Eastern Ethiopia (Haramaya / ASAL region approx.)
+var ethiopia = [9.4, 42.0];
+
+
+// -------------------------------
+// Add Markers
+// -------------------------------
+
+var marker1 = L.marker(kapiti).addTo(map)
+    .bindPopup("<b>Kenya</b><br>Kapiti Conservancy<br>Range Biomass Modeling");
+
+var marker2 = L.marker(ethiopia).addTo(map)
+    .bindPopup("<b>Ethiopia</b><br>Arid & Semi-Arid Lands<br>Natural Resources Monitoring");
+
+
+// -------------------------------
+// Curved Network Connection
+// -------------------------------
+
+// Function to create curved arc between two points
+function createCurve(latlng1, latlng2) {
+
+    var lat1 = latlng1[0],
+        lng1 = latlng1[1],
+        lat2 = latlng2[0],
+        lng2 = latlng2[1];
+
+    // Calculate midpoint offset for curve
+    var offsetX = lng2 - lng1,
+        offsetY = lat2 - lat1;
+
+    var r = Math.sqrt(Math.pow(offsetX, 2) + Math.pow(offsetY, 2));
+    var theta = Math.atan2(offsetY, offsetX);
+
+    var thetaOffset = (Math.PI / 8); // Increase for higher curve
+
+    var r2 = (r / 2) / Math.cos(thetaOffset);
+    var theta2 = theta + thetaOffset;
+
+    var midpointX = r2 * Math.cos(theta2) + lng1;
+    var midpointY = r2 * Math.sin(theta2) + lat1;
+
+    var midpointLatLng = [midpointY, midpointX];
+
+    return L.polyline([latlng1, midpointLatLng, latlng2], {
+        color: 'blue',
+        weight: 3,
+        opacity: 0.8
+    }).addTo(map);
 }
 
-// Load GeoJSON
-fetch('./plots.geojson')
-.then(response => response.json())
-.then(data => {
-
-    L.geoJSON(data, {
-        pointToLayer: function (feature, latlng) {
-            return L.circleMarker(latlng, {
-                radius: 8,
-                fillColor: getColor(feature.properties.country),
-                color: "#000",
-                weight: 1,
-                opacity: 1,
-                fillOpacity: 0.8
-            });
-        },
-        onEachFeature: function (feature, layer) {
-            layer.bindPopup(
-                "<b>" + feature.properties.name + "</b><br>" +
-                "<strong>Country:</strong> " + feature.properties.country + "<br>" +
-                "<strong>Year:</strong> " + feature.properties.year + "<br>" +
-                "<strong>Funding:</strong> " + feature.properties.funding + "<br><br>" +
-                feature.properties.description
-            );
-        }
-    }).addTo(map);
-
-    // Additional Fixed Research Markers
-L.marker([-1.63397, 37.1476]).addTo(map)
-    .bindPopup("<b>Kapiti Conservancy, Kenya</b><br>Lat: -1.63397, Lon: 37.1476");
-
-L.marker([9.4000, 42.017]).addTo(map)
-    .bindPopup("<b>Haramaya, Ethiopia</b><br>Lat: 9.4000, Lon: 42.017");
+// Create curved connection
+createCurve(kapiti, ethiopia);
 
 
-});
+// -------------------------------
+// Auto Zoom to Show All Locations
+// -------------------------------
 
-// Layer Control
-var baseMaps = {
-    "OpenStreetMap": osm,
-    "Satellite (Esri)": satellite
-};
-
-L.control.layers(baseMaps).addTo(map);
-
-// Legend
-var legend = L.control({position: 'bottomright'});
-
-legend.onAdd = function () {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += "<h4>Research Locations</h4>";
-    div.innerHTML += '<i style="background: green"></i> Kenya<br>';
-    div.innerHTML += '<i style="background: blue"></i> Ethiopia<br>';
-    return div;
-};
-
-legend.addTo(map);
+var group = new L.featureGroup([marker1, marker2]);
+map.fitBounds(group.getBounds());
