@@ -26,6 +26,19 @@
         "type": "Point",
         "coordinates": [37.85, 6.98]
            }
+    },
+    { 
+     "type": "Feature",
+      "properties": {
+        "name": "UNE",
+        "country": "Australia",
+        "description": "PhD student."
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [133.2813, -26.4391]
+           }
     }
+
   ]
 }

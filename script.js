@@ -59,6 +59,9 @@ L.marker([-1.63397, 37.1476]).addTo(map)
 L.marker([9.4000, 42.017]).addTo(map)
     .bindPopup("<b>Haramaya, Ethiopia</b><br>Lat: 9.4000, Lon: 42.017");
 
+L.marker([-26.4391, 133.2813]).addTo(map)
+    .bindPopup("<b>University of New England, Australia</b><br>Lat: -26.4391, Lon: 133.2813");
+
 
 });
 
@@ -78,6 +81,7 @@ legend.onAdd = function () {
     div.innerHTML += "<h4>Research Locations</h4>";
     div.innerHTML += '<i style="background: green"></i> Kenya<br>';
     div.innerHTML += '<i style="background: blue"></i> Ethiopia<br>';
+    div.innerHTML += '<i style="background: gray"></i> Australia<br>';
     return div;
 };
 
