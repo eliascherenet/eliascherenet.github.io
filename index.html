@@ -4,11 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elias Cherenet | Research Portfolio</title>
-<meta name="description" content="Elias Cherenet’s research portfolio in geospatial analytics, biomass modeling, drought monitoring, and machine learning.">
-<meta name="keywords" content="geospatial, biomass, drought monitoring, machine learning, GIS, Africa research">
+
+<meta name="description" content="Elias Cherenet – Geospatial Analyst specializing in biomass modeling, drought monitoring, machine learning, and climate-resilient environmental systems in Eastern Africa.">
+<meta name="keywords" content="geospatial, biomass, drought monitoring, machine learning, GIS, Africa research, remote sensing">
 <meta name="author" content="Elias Cherenet">
 
-<!-- Leaflet CSS for interactive map -->
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Academicons (ORCID & ResearchGate) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
+
+<!-- Leaflet CSS -->
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
 
 <!-- Google Fonts -->
@@ -16,6 +23,22 @@
 
 <!-- Custom CSS -->
 <link rel="stylesheet" href="style.css">
+
+<style>
+.social-links {
+    margin-top: 15px;
+}
+.social-links a {
+    font-size: 26px;
+    margin: 0 12px;
+    color: #333;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+.social-links a:hover {
+    transform: scale(1.2);
+}
+</style>
 </head>
 
 <body>
@@ -36,9 +59,25 @@
 <header>
     <h1>Elias Cherenet</h1>
     <p>Geospatial Analyst | Remote Sensing | Biomass Modeling | Drought Monitoring | ML | Climate Models | Natural Resources Monitoring</p>
+
+    <!-- Social Icons -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/elias-cherenet-weldemariam-6a3b4235/" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.researchgate.net/lab/Elias-cherenet-Weldemariam-Lab" target="_blank">
+            <i class="ai ai-researchgate"></i>
+        </a>
+        <a href="https://orcid.org/my-orcid?orcid=0000-0001-5335-2120" target="_blank">
+            <i class="ai ai-orcid"></i>
+        </a>
+        <a href="https://scholar.google.com/citations?view_op=list_works&hl=en&hl=en&user=OHjNx60AAAAJ" target="_blank">
+            
+        </a>
+    </div>
 </header>
 
-<!-- About Me -->
+<!-- About -->
 <section id="about">
     <h2>About Me</h2>
     <p>
@@ -50,7 +89,7 @@
     </p>
 </section>
 
-<!-- Research Interests -->
+<!-- Research -->
 <section id="research">
     <h2>Research Interests</h2>
     <ul>
@@ -68,17 +107,17 @@
     </ul>
 </section>
 
-<!-- Research Locations -->
+<!-- Locations -->
 <section id="locations">
     <h2>Research Locations</h2>
     <ul>
-        <li>🇰🇪 <strong>Kenya</strong> – Kapiti Conservancy (Range Biomass Modeling)</li>
-        <li>🇪🇹 <strong>Ethiopia</strong> – Arid & Semi-Arid Lands (Natural Resources Monitoring)</li>
-        <li>AUS <strong>Australia</strong> – University of New England (PhD Research)</li>
+        <li>🇰🇪 Kenya – Kapiti Conservancy (Range Biomass Modeling)</li>
+        <li>🇪🇹 Ethiopia – Arid & Semi-Arid Lands (Natural Resources Monitoring)</li>
+        <li>🇦🇺 Australia – University of New England (PhD Research)</li>
     </ul>
 </section>
 
-<!-- Interactive Map -->
+<!-- Map -->
 <section id="map">
     <h2>Interactive Open Map</h2>
     <div id="map"></div>
@@ -96,24 +135,7 @@
     </ul>
 </section>
 
-<!-- MSc Students Advised -->
-<section id="msc-students">
-    <h2>MSc Students I Advised</h2>
-    <ul>
-        <li><strong>Ephreme Shimelis</strong> – Spatio-Temporal of Analysis Land Use / Land Cover Change,
-and Their Implication on Climate Variability: The Case of Gobele Water- Shade of Wabe Shebelle Basin, Eastern Ethiopia (Haramaya University , 2024)</li>
-        <li><strong>Abetu Megersa</strong> – CAUSES, SOCIO-ECONOMIC IMPACTS AND COPING STRATEGIES OF URBAN FLOODING IN CHELENKO TOWN, META WOREDA,
-EAST HARARGHE, OROMIA REGIONAL STATE, ETHIOPIA (Haramaya University , 2024)</li>
-        <li><strong>Ebrahim Esmael Omer</strong> – Impact of Climate Change and Variability on Rural Households Livelihood and Their Adaptation Strategies Dacarta District, Somaliland (Haramaya University, 2025)</li>
-        <li><strong>Mesele Cherinet</strong> – URBAN SPRAWL AND ITS EFFECTS ON THE PERIPHERAL FARMING HOUSEHOLDS: THE CASE OF DURAME TOWN, KEMBATA TEMBARO ZONE, SNNPR STATE, ETHIOPIA (Haramaya University, 2023)</li>
-        <li><strong>Usmael Ahmed</strong> – IMPACT OF CLIMATE CHANGE ON DISTRIBUTION OF INDIGENOUS TREE SPECIES IN CASE OF META WOREDA, EAST HARARGHE,OROMIA REGIONAL STATE, ETHIOPIA(Haramaya University,2025)</li>
-        <li><strong>Habtamu Demie</strong> – EFFECTS OF LAND USE LAND COVER CHANGE ON LAND DEGRADATION IN FEDIS WOREDA, EAST HAR ARGHE ZONE,OROMIA REGIONAL STATE, ETHIOPIA(Haramaya University, 2025)</li>
-        <li><strong>Zerihun Tolcha</strong> – Impacts of Climate Variability on Major Crop Production and Smallholder Farmers Local Adaptation Strategies. The Case of Babile District, East Hararghe Zone, Oromia Regional State, Ethiopia 
-(Haramaya University, 2025)</li>
-     </ul>
-</section>
-
-   <!-- CV -->
+<!-- CV -->
 <section id="cv">
     <h2>My CV</h2>
     <p>
@@ -126,7 +148,21 @@ EAST HARARGHE, OROMIA REGIONAL STATE, ETHIOPIA (Haramaya University , 2024)</li>
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:eliachent@gmail.com">eliachent@gmail.com</a></p>
-</section> 
+
+    <!-- Social Icons Again -->
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/YOUR-LINK" target="_blank">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.researchgate.net/profile/YOUR-LINK" target="_blank">
+            <i class="ai ai-researchgate"></i>
+        </a>
+        <a href="https://orcid.org/YOUR-ID" target="_blank">
+            <i class="ai ai-orcid"></i>
+        </a>
+    </div>
+</section>
+
 <!-- Footer -->
 <footer>
     <p>© 2026 Elias Cherenet</p>
@@ -134,8 +170,7 @@ EAST HARARGHE, OROMIA REGIONAL STATE, ETHIOPIA (Haramaya University , 2024)</li>
 
 <!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<!-- Custom JS -->
 <script src="script.js"></script>
+
 </body>
 </html>
-
